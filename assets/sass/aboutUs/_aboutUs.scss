@@ -1,0 +1,93 @@
+.about_us {
+    margin-top: 12rem;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -4%;
+        left: -23%;
+        background-image: url("./assets/img/category/bg1.jpg");
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+        width: 50rem;
+        height: 45rem;
+        z-index: -1;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -4%;
+        right: -13%;
+        background-image: url("./assets/img/category/bg2.jpg");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        width: 48rem;
+        height: 43rem;
+        z-index: -1;
+    }
+
+    @media only screen and (max-width:767px) {
+        margin-top: 9rem;
+    }
+
+    .sec-head {
+        margin-bottom: 2rem;
+    }
+
+    .services {
+        margin-top: 4rem;
+
+        @media only screen and (max-width:767px) {
+            display: block !important;
+        }
+    }
+
+    .perspectives {
+        margin-top: 4rem;
+
+        @media only screen and (max-width:767px) {
+            margin-bottom: 7rem;
+        }
+
+        .title {
+            color: $firstColor;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .box {
+            margin-top: 1rem;
+
+            li {
+                color: $tenthColor;
+                font-size: .9rem;
+                position: relative;
+                padding-right: 1.2rem;
+                margin-top: 0.5rem;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    bottom: 50%;
+                    transform: translateY(50%);
+                    background-color: $secendColor;
+                    border-radius: 50%;
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+    }
+
+    .about-us {
+        .desc-style {
+            width: 100% !important;
+        }
+    }
+}

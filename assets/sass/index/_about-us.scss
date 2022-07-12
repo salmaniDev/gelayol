@@ -1,0 +1,42 @@
+.about-us {
+    margin-top: 8rem;
+
+    .item {
+        display: flex;
+        justify-content: center;
+
+        .image {
+            width: 21rem;
+            height: 26rem;
+            margin-left: 1rem;
+            @media only screen and (max-width:767px){
+                    display: none;
+            }
+        }
+
+        .info {
+            @media only screen and (max-width:991px){
+                    text-align: center;
+            }
+            .title {
+                color: $firstColor;
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+                @media only screen and (max-width:767px) {
+                    font-size: 1rem;
+                    margin-bottom: .5rem;
+                }
+            }
+
+            .desc-style {
+                line-height: 2.5;
+                width: 36rem;
+                text-align: justify;
+
+                @media only screen and (max-width:991px) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

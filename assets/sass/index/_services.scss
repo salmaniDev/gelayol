@@ -1,0 +1,55 @@
+.services {
+    margin-top: 6rem;
+
+
+    @media only screen and (max-width:767px) {
+        display: none;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width:767px) {
+            overflow-x: scroll;
+            padding-bottom: 1rem;
+        }
+
+
+        .item {
+            text-align: center;
+            width: 160px;
+
+            @media only screen and (max-width:991px) {
+                width: 100px;
+            }
+
+            @media only screen and (max-width:767px) {
+                width: 30%;
+                margin: 0 15px;
+                flex-shrink: 0;
+            }
+
+
+
+            .icon {
+                font-size: .8rem;
+                width: 6rem;
+                height: 3.5rem;
+            }
+
+            .title {
+                font-size: .9rem;
+                color: $firstColor;
+            }
+
+            .desc-style {
+                font-size: .7rem;
+                color: $descColor;
+                font-weight: 100;
+                line-height: 1.8;
+            }
+
+        }
+    }
+}

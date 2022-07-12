@@ -1,0 +1,100 @@
+.hero {
+    margin-top: 12rem;
+
+    @media only screen and (max-width:767px) {
+        margin-top: 7rem;
+    }
+
+    .item {
+        position: relative;
+
+        .image {
+            // width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 10rem;
+            height: 20rem;
+            border-radius: 5px;
+        }
+
+        .box-action {
+            @media only screen and (max-width:767px) {
+                display: none;
+            }
+
+            .arrow {
+                position: absolute;
+                bottom: 50%;
+                transform: translateY(50%);
+                right: 0;
+                cursor: pointer;
+
+                &.left {
+                    left: -18px;
+                    right: auto;
+                }
+
+                &.right {
+                    right: -18px;
+                }
+
+                .icon {
+                    display: inline-block;
+                    border-radius: 60px;
+                    padding: 0.6rem 0.8rem;
+                    background-color: $secendColor;
+                    border: 2px solid #fff;
+                    color: $firstColor;
+                }
+            }
+        }
+
+        .slick-dots {
+            position: absolute;
+            display: flex;
+            bottom: 20px;
+            left: 18px;
+            background-color: #ffffff2e;
+            padding: 5px 6px;
+            border-radius: 20px;
+
+            @media only screen and (max-width:767px) {
+                bottom: -30px;
+                transform: translateX(50%);
+                left: auto;
+                right: 50%;
+                background-color: #27276f38;
+                li{
+                    background-color: #fff!important;
+                    &.slick-active{
+                        background-color:$firstColor!important;
+                    }
+                }
+            }
+
+            li {
+                background: #ffffff5e;
+                border-radius: 25px;
+                height: 8px;
+                width: 8px;
+                transition: $transition;
+                margin-right: 0.3rem;
+                cursor: pointer;
+
+                &.slick-active {
+                    width: 30px !important;
+                    background-color: #fff;
+                }
+
+                &:first-child {
+                    margin-right: 0;
+                }
+
+                button {
+                    display: none;
+                }
+            }
+        }
+    }
+}

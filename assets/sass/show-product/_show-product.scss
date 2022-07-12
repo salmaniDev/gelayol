@@ -1,0 +1,234 @@
+.show-product {
+    margin-top: 12rem;
+
+    .item {
+        .slider {
+            position: relative;
+            img{
+                height: 300px;
+            }
+
+            .link {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .bottom-slider {
+            margin-top: 1.5rem;
+
+            .image {
+                text-align: center;
+                width: 109px !important;
+                opacity: .7;
+                cursor: pointer;
+                transition: $transition;
+                &:hover{
+                    opacity: 1;
+                }
+
+                img {
+                    width: 70%;
+                    display: inline-block
+                }
+            }
+        }
+
+        .box-action {
+            .arrow {
+                position: absolute;
+                bottom: 70%;
+                transform: translateY(50%);
+                right: 0;
+                cursor: pointer;
+                .icon{
+                    display: inline-block;
+                    border-radius: 60px;
+                    padding: 0.6rem 0.8rem;
+                    background-color: #dedede;
+                    border: 2px solid #fff;
+                    color: #4e4e4e;
+                    font-size: 0.9rem;
+                    opacity: 0.5;
+                    transition: $transition;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+
+                &.left {
+                    right: 14%;
+                    // right: auto;
+                }
+
+                &.right {
+                    left: 13%;
+                    right: auto;
+                }
+            }
+        }
+
+        .info {
+            .title {
+                font-weight: 200;
+                font-size: 1.3rem;
+                color: $firstColor;
+                margin-bottom: 0.8rem;
+
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .desc-style {
+                font-size: .8rem;
+            }
+        }
+
+        .price {
+            text-align: center;
+            background-color: $bgColor;
+            border-radius: 15px;
+            padding: 2rem 1.5rem;
+            border: 1px solid #eee;
+
+            .title {
+                color: #2D4383;
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                border-bottom: 1px solid $ninthColor;
+                padding-bottom: 1rem;
+            }
+
+            .btn-link {
+                background-color: $priceColor;
+                padding: 10px 40px;
+                display: flex;
+                justify-content: center;
+                position: relative;
+
+                .icon {
+                    font-size: 1.5rem;
+                    position: absolute;
+                    right: 25px;
+                    bottom: 50%;
+                    transform: translateY(50%);
+                }
+            }
+
+            .desc-style {
+                font-size: 0.7rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+.product-description {
+    margin-top: 5rem;
+
+    .item {
+        .head {
+            background-color: $fourthColor;
+            border-radius: 5px 5px 0 0;
+
+            // padding: 15px 20px;
+            .box {
+                display: flex;
+
+                li {
+                    padding: 0.8rem 2rem;
+                    cursor: pointer;
+                    border-top: 3px solid $fourthColor;
+                    font-size: 0.9rem;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        right: 0;
+                    }
+
+                    .icon {
+                        padding-left: 0.5rem;
+                    }
+
+                    &.active {
+                        background-color: #fff;
+                        border-color: $ThirdColor;
+                        color: $ThirdColor;
+                    }
+                }
+            }
+        }
+
+        .body {
+            border-radius: 0 0 5px 5px;
+
+            .info {
+                display: none;
+                padding: 35px 125px;
+                box-shadow: 0px 4px 10px #0000001f;
+                border-radius: 0 0 5px 5px;
+
+                &.active {
+                    display: block;
+                }
+
+                &#product-info {
+                    .box {
+                        li {
+                            line-height: 3;
+
+                            p {
+                                color: $fifthColor;
+                                font-size: .9rem;
+
+                                span {
+                                    color: #000;
+                                    padding-right: 0.5rem;
+
+                                    &.line {
+                                        color: $fifthColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                form {
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        background-color: $bgColor;
+                        border: 1px solid #eaeaea;
+                        border-radius: 5px;
+                        font-size: 0.9rem;
+                        padding: 13px 15px;
+                        font-family: "pinarFont";
+                        font-weight: 200;
+                    }
+
+                    textarea {
+                        resize: unset;
+                        height: 11rem;
+                    }
+
+                    .btn-link {
+                        border: unset;
+                        font-family: 'pinarFont';
+                        font-weight: 200;
+                        width: 100%;
+                        padding: 13px 15px;
+                        background-color: $priceColor;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

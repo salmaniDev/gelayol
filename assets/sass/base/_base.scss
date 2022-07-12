@@ -1,0 +1,161 @@
+body {
+    font-family: 'pinarFont';
+    font-weight: 200;
+    direction: rtl;
+    text-align: right;
+    color: #000;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: #000;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+////// remove arrow in input type number
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/////////////////
+
+////// Chenge color Selection
+
+::-moz-selection {
+    /* Code for Firefox */
+    background: $firstColor;
+    color: #fff;
+}
+
+::selection {
+    background: $firstColor;
+    color: #fff;
+}
+
+////////////////
+
+
+/////////////// remove cross input type search
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+
+
+
+
+.sec-head {
+    text-align: center;
+
+    .title {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+        color: $firstColor;
+
+        @media only screen and (max-width:767px) {
+            font-size: 1rem;
+        }
+    }
+
+    .subtitle {
+        color: $descColor;
+        line-height: 2;
+        font-size: .9rem;
+
+        @media only screen and (max-width:767px) {
+            line-height: 2.5;
+            font-size: .8rem;
+        }
+    }
+}
+
+.link-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.desc-style {
+    color: $descColor;
+    line-height: 2.3;
+    font-size: .9rem;
+
+    @media only screen and (max-width:767px) {
+        font-size: .8rem;
+    }
+}
+
+.btn-link {
+    background-color: $sixthColor;
+    color: #fff;
+    border-radius: 7px;
+    padding: 10px 30px;
+    font-size: .9rem;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 40;
+    transition: all 0.5s;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+form {
+    .input_box {
+        input,textarea,select {
+            width: 100%;
+            font-family: "pinarFont";
+            font-weight: 200;
+            border-radius: 15px;
+            border: 1px solid $fourthColor;
+            color: $descColor;
+            transition: all 0.4s;
+            box-shadow: 0px 3px 12px 0px #9f9f9f1a;
+            padding: 0.8rem 1rem;
+            margin-bottom: 1rem;
+            resize: none;
+            &::placeholder{
+                color: $EighthColor;
+            }
+        }
+        textarea{
+            height: 8rem;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.not-found {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10rem;
+
+    .item {
+        .title{
+            font-size: 7rem;
+            font-weight: 300;
+            color: $tenthColor;
+            margin-bottom: -55px;
+        }
+        .subtitle{
+            color: $descColor;
+            font-weight: 200;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+    }
+}

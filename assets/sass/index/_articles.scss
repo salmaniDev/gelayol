@@ -1,0 +1,112 @@
+.articles {
+    margin-top: 7rem;
+
+    @media only screen and (max-width:767px){
+        margin-top: 4rem;
+    }
+
+    .sec-head {
+        margin-bottom: 2.5rem;
+        .title{
+            margin-bottom: 0;
+        }
+
+        .head {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .link {
+                color: $descColor;
+                display: flex;
+                align-items: center;
+                font-size: .9rem;
+
+                &:hover {
+                    .icon {
+                        transform: translateX(-3px);
+                    }
+                }
+
+                .icon {
+                    font-size: 0.8rem;
+                    color: #000;
+                    padding-right: 1rem;
+                    transition: all .5s;
+                }
+            }
+        }
+
+        .desc-style {
+            text-align: right;
+        }
+    }
+
+    .item {
+        position: relative;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 17px;
+
+        &:hover {
+            .image {
+                transform: scale(1.1);
+            }
+            .title{
+                bottom: -3%;
+            }
+        }
+
+        .image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 17px;
+            transition: all .5s;
+        }
+
+        .data {
+            position: absolute;
+            top: 0;
+            transform: translateY(50%);
+            backdrop-filter: blur(4px);
+            background: #ffffff30;
+            border-radius: 17px;
+            right: 15px;
+            padding: 0.9rem 0.8rem;
+
+            p {
+                font-size: 0.9rem;
+                color: #fff;
+                margin-bottom: -.2rem;
+
+                &.acolyte {
+                    font-size: 0.8rem;
+                }
+
+                &.year {
+                    font-size: 1rem;
+                }
+
+                span {
+                    color: rgba(255, 255, 255, 0.295);
+                    font-size: 0.7rem;
+                    padding-right: 0.3rem;
+                }
+            }
+        }
+
+        .title {
+            color: #000;
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            transition: all .5s;
+            z-index: -1;
+        }
+    }
+}

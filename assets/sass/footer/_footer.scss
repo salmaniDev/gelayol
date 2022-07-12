@@ -1,0 +1,154 @@
+.footer {
+    background-color: $sixthColor;
+    padding-top: 14.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+    color: #fff;
+
+    &::before {
+        content: "";
+        background-image: url("./assets/img/footer/afterTopbg.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 11rem;
+        top: 0;
+    }
+
+    &::after {
+        content: "";
+        background-image: url("./assets/img/products/flower.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 29.3%;
+        right: 50%;
+        transform: translateX(50%) translateY(50%);
+        width: 2rem;
+        height: 1.7rem;
+    }
+
+    .social-media {
+        display: flex;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%) translateY(50%);
+        top: 20%;
+        margin-right: 1.3rem;
+
+        .link {
+            margin-left: 1.7rem;
+
+            &:hover {
+                .icon {
+                    color: $firstColor;
+                }
+            }
+
+            .icon {
+                color: $iconColor;
+                font-size: 1.3rem;
+                transition: all .5s;
+
+                &.icon-google_plus {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .desc-style {
+        color: $ninthColor;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+    .footer-bottom {
+        margin-bottom: 1.5rem;
+
+        .item {
+            text-align: center;
+
+            .certificates {
+                display: flex;
+                align-items: center;
+
+                @media only screen and (max-width:824px) {
+                    flex-direction: column;
+                }
+
+                .image {
+                    margin-left: 0.8rem;
+                    border-radius: 5px;
+                    padding: 1.4rem 1rem;
+                    background-color: #fff;
+                    width: 8rem;
+                    height: 9.5rem;
+
+                    @media only screen and (max-width:1072px) {
+                        width: 6rem;
+                        height: 7.5rem;
+                    }
+
+                    @media only screen and (max-width:767px) {}
+
+                }
+            }
+        }
+
+        .title {
+            font-size: 1rem;
+            margin-bottom: .5rem;
+        }
+
+        .footer-links {
+
+            .link {
+                font-size: 0.8rem;
+                margin-bottom: 1.6rem;
+                display: block;
+                color: $EighthColor;
+                transition: all .4s;
+                font-weight: 200;
+
+                &:hover {
+                    color: $ThirdColor;
+                }
+            }
+        }
+    }
+}
+
+.modal-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 200;
+    padding: 1.3rem 0;
+    background-color: #fff;
+    box-shadow: 1px -6px 11px 0px #0000002e;
+
+    .box {
+        overflow-x: scroll;
+        display: flex;
+        white-space: nowrap;
+        overflow-y: hidden;
+        text-align: center;
+        width: 100%;
+        padding-right: 0;
+        justify-content: space-around;
+
+        li {
+            .icon {
+                font-size: 1.3rem;
+                margin-top: 0.1rem;
+                display: block;
+                color: $tenthColor;
+            }
+        }
+    }
+}

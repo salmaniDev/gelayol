@@ -1,0 +1,60 @@
+.contactUs {
+    margin-top: 10rem;
+    background-color: $bgColor;
+    padding: 4rem;
+    padding-bottom: 2rem;
+    @media only screen and(max-width:991px) { 
+        padding: 2.5rem;
+    }
+    @media only screen and(max-width:767px){
+        margin-top: 4rem;
+    }
+
+    .row:first-child {
+        @media only screen and(max-width:991px) { 
+            flex-wrap: wrap-reverse;
+        }
+    }
+
+    form {
+        .head {
+            margin-bottom: 1.5rem;
+            @media only screen and (max-width:991px){
+                text-align: center;
+            }
+
+            .title {
+                font-size: 1.2rem;
+                color: $firstColor;
+            }
+        }
+    }
+
+    .map {
+        iframe {
+            height: 23.2rem;
+            border-radius: 15px;
+        }
+    }
+}
+
+.contact-info {
+    margin-top: 2.5rem;
+    @media only screen and (max-width:767px){
+        margin-bottom: 7rem;
+    }
+
+    .sec-head {
+        margin-bottom: 2rem;
+    }
+
+    .box {
+        li {
+            margin-bottom: 1rem;
+
+            span {
+                padding-right: 0.3rem;
+            }
+        }
+    }
+}
